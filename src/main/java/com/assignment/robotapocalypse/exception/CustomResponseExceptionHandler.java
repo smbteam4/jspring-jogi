@@ -39,7 +39,7 @@ public class CustomResponseExceptionHandler extends ResponseEntityExceptionHandl
 
     @ExceptionHandler({InvalidGenderException.class})
     public ResponseEntity<Object> InvalidGender(Exception ex, WebRequest request) {
-        return new ResponseEntity<>("Invalid Gender. Gender should be either MALE, FEMALE or OTHER.", new HttpHeaders(), HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(ex.getMessage(), new HttpHeaders(), HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler({Exception.class})
@@ -47,10 +47,6 @@ public class CustomResponseExceptionHandler extends ResponseEntityExceptionHandl
         return new ResponseEntity<>(ex.getMessage(), new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    @ExceptionHandler(value = {InvalidFormatException.class})
-    public ResponseEntity<Object> handleIllegalArgumentException(InvalidFormatException exception) {
-        return new ResponseEntity<>("Invalid Gender. Gender should be either MALE, FEMALE or OTHER.", new HttpHeaders(), HttpStatus.BAD_REQUEST);
-    }
 
 }
 
