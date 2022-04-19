@@ -1,0 +1,17 @@
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      username: rootuser
+      password: rootpass
+      host: localhost
+      port: 27017
+      database: ApocalypseSurvivors
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+robot:
+  url: https://robotstakeover20210903110417.azurewebsites.net/robotcpu
+
+
