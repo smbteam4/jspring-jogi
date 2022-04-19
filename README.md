@@ -47,7 +47,7 @@ mvn clean package
 java -jar target/robot-apocalypse-0.0.1-SNAPSHOT.jar
 ```
 
-##Swagger Endpoint
+## Swagger Endpoint
 
 Swagger spec can be accessed from http://localhost:8080/swagger-ui.html
 
